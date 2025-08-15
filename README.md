@@ -13,19 +13,6 @@ This project implements a full pipeline to detect and recognize vehicle license 
 
 ---
 
-## 📂 File Structure
-
-```
-ANPR/
-├── images/                   # Input images & annotation XMLs
-├── data_preprocessing.ipynb  # Extract bounding boxes to CSV
-├── model_training.ipynb      # Train detector
-├── plate_ocr.py              # Apply OCR
-├── labels.csv                # Bounding box info
-└── README.md
-```
-
----
 
 ## 🛠️ Dependencies
 
@@ -41,21 +28,6 @@ Also install [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) and ens
 
 - Base: `InceptionResNetV2` from Keras Applications
 - Output: 4 coordinates (xmin, ymin, xmax, ymax)
-
----
-
-## 🖥️ How to Use
-
-```bash
-# Step 1: Convert XML labels to CSV
-python data_preprocessing.py
-
-# Step 2: Train the detector
-python train_detector.py
-
-# Step 3: Run OCR on detected plates
-python plate_ocr.py
-```
 
 ---
 
